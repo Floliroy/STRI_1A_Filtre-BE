@@ -6,9 +6,9 @@ function tcheby(){
 
   let parametres = new Map()
   parametres.set("ordre", {nombre: ordre, decimal: true, min: 1})
-  parametres.set("attenuation", {nombre: ordre, decimal: false, min: 0})
-  parametres.set("frequence", {nombre: ordre, decimal: false, min: 0})
-  parametres.set("resistance", {nombre: ordre, decimal: false, min: 0})
+  parametres.set("attenuation", {nombre: attenuation, decimal: false, min: 0})
+  parametres.set("frequence", {nombre: frequence, decimal: false, min: 0})
+  parametres.set("resistance", {nombre: resistance, decimal: false, min: 0})
 
   if(parametres.areNumbers()){
     const pi = Math.PI
