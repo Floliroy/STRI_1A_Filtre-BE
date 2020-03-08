@@ -49,6 +49,7 @@ function validateNumber(id, decimal, min){
 }
 
 Map.prototype.areNumbers = function(){
+    let retour = true
     for(let [key, value] of this){
         if(!value.nombre.isNumberFormated(value.decimal, value.min)){
             retour = false
