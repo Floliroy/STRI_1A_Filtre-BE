@@ -4,9 +4,13 @@ function tcheby(){
   let frequence = document.getElementById("frequence").value
   let resistance = document.getElementById("resistance").value
 
-  const parametres = [ordre, attenuation, frequence, resistance]
+  let parametres = new Map()
+  parametres.set(ordre, {decimal: true, min: 1})
+  parametres.set(attenuation, {decimal: false, min: 0})
+  parametres.set(frequence, {decimal: false, min: 0})
+  parametres.set(resistance, {decimal: false, min: 0})
 
-  if (parametres.areNumbers() && ordre.isNumberFormated(true)){
+  if (parametres.areNumbers()){
     const pi = Math.PI
 
     ordre = parseFloat(ordre)
@@ -79,16 +83,16 @@ function tcheby(){
     }
   }else{
     let message = ""
-    if(!ordre.isNumberFormated(true)){
+    if(!ordre.isNumberFormated(true, 1)){
       message += "\nVeuillez remplir correctement l'ordre du filtre."
     }
-    if(!attenuation.isNumberFormated(false)){
+    if(!attenuation.isNumberFormated(false, 0)){
       message += "\nVeuillez remplir correctement le taux atténuation."
     }
-    if(!frequence.isNumberFormated(false)){
+    if(!frequence.isNumberFormated(false, 0)){
       message += "\nVeuillez remplir correctement la fréquence de coupure."
     }
-    if(!resistance.isNumberFormated(false)){
+    if(!resistance.isNumberFormated(false, 0)){
       message += "\nVeuillez remplir correctement l'impédance."
     }
     window.alert(message)

@@ -18,12 +18,12 @@
 
 		<br/><br/>
 		<label for="ordre">Valeur de l'ordre :</label><br/>
-		<input type="number" min="0" id="ordre" class="unknow" onchange="validateNumber('ordre', true)">
+		<input type="number" min="1" id="ordre" class="unknow" onchange="validateNumber('ordre', true, 1)">
 
 		<br/><br/><br/>
 		<label for="attenuation">Taux d'atténuation :</label><br/>
 		<span>dB</span>
-		<input type="number" min="0" step="any" id="attenuation" class="unknow" onchange="validateNumber('attenuation', false)">
+		<input type="number" min="0" step="any" id="attenuation" class="unknow" onchange="validateNumber('attenuation', false, 0)">
 			
 		<br/><br/><br/>
 		<label for="frequence">Frequence de coupure :</label><br/>
@@ -33,12 +33,12 @@
 			<option value="6">MHz</option>
 			<option value="9">GHz</option>
 		</select>
-		<input type="number" min="0" step="any" id="frequence" class="unknow" onchange="validateNumber('frequence', false)">
+		<input type="number" min="0" step="any" id="frequence" class="unknow" onchange="validateNumber('frequence', false, 0)">
 			
 		<br/><br/><br/>
 		<label for="resistance">Impédance :</label><br/>
 		<span>Ω</span>
-		<input type="number" min="0" step="any" id="resistance" class="unknow" onchange="validateNumber('resistance', false)">
+		<input type="number" min="0" step="any" id="resistance" class="unknow" onchange="validateNumber('resistance', false, 0)">
 
 
 		<br/><br/><br/>
