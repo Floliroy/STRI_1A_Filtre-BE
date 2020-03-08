@@ -35,7 +35,7 @@ function createTable(resistance, capacite, bobine){
 
         td = document.createElement("td")
         if((i) != Math.ceil(capacite.length/2)){
-            td.appendChild(document.createTextNode(`${bobine[i].toExponential(2)} F`))
+            td.appendChild(document.createTextNode(`${bobine[i].toExponential(2)} H`))
         }else{
             td.appendChild(document.createTextNode("/"))
         }
