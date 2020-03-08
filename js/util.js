@@ -52,7 +52,6 @@ Map.prototype.areNumbers = function(){
     for(let [key, value] of this){
         if(!value.nombre.isNumberFormated(value.decimal, value.min)){
             retour = false
-            console.log("not ok " + key)
         }
     }
     return retour
