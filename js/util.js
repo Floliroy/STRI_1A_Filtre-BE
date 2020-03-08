@@ -1,3 +1,14 @@
+$(function() {
+    $("#dialog").dialog({
+        autoOpen: false,
+        modal: true,
+        width: 450,
+        height: 150,
+        show: "shake",
+        hide: "fade"
+    })
+})
+
 function myCos(value){
     let myTerm1 = Math.pow(Math.E, value)
     let myTerm2 = Math.pow(Math.E, -value)
