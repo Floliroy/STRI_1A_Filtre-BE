@@ -1,15 +1,3 @@
-function br(nbTour){
-    for(let i=0 ; i<nbTour ; i++){
-        let newLink = document.createElement("br")
-        document.getElementById("result").appendChild(newLink)
-    }
-}
-
-function print(texte){
-    let newLinkText = document.createTextNode(texte)
-    document.getElementById("result").appendChild(newLinkText)
-}
-
 function myCos(value){
     let myTerm1 = Math.pow(Math.E, value)
     let myTerm2 = Math.pow(Math.E, -value)

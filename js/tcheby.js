@@ -64,23 +64,8 @@ function tcheby(){
     }
 
     document.getElementById("result").innerHTML = ""
-    br(1)
-    print(`Rn = ${Math.round(rn*100)/100} Ω`)
-
-    let cpt = 0
-    for(let i=1; i<=Math.ceil(ordre/2) ; i++){
-      br(2)
-      cpt++
-      let res = c[i]
-      print(`C[${cpt}] = ${res.toExponential(2)} F`)
-
-      if((i) != Math.ceil(ordre/2)){
-        br(2)
-        cpt++
-        res = l[i]
-        print(`L[${cpt}] = ${res.toExponential(2)} H`)
-      }
-    }
+    createTable(rn, c,l)
+    
   }else{
     let message = ""
     if(!ordre.isNumberFormated(true, 1)){
