@@ -79,16 +79,16 @@ function tcheby(){
     }
   }else{
     let message = ""
-    if(!isNumberFormated(ordre) || ordre.includes(",") || ordre.includes(".")){
+    if(!ordre.isNumberFormated(true)){
       message += "\nVeuillez remplir correctement l'ordre du filtre."
     }
-    if(!isNumberFormated(attenuation)){
+    if(!attenuation.isNumberFormated(false)){
       message += "\nVeuillez remplir correctement le taux atténuation."
     }
-    if(!isNumberFormated(frequence)){
+    if(!frequence.isNumberFormated(false)){
       message += "\nVeuillez remplir correctement la fréquence de coupure."
     }
-    if(!isNumberFormated(resistance)){
+    if(!resistance.isNumberFormated(false)){
       message += "\nVeuillez remplir correctement l'impédance."
     }
     window.alert(message)
