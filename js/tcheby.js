@@ -1,40 +1,4 @@
-function br(nbTour){
-  for(let i=0 ; i<nbTour ; i++){
-    let newLink = document.createElement('br')
-    document.getElementById('result').appendChild(newLink)
-  }
-}
-
-function print(texte){
-  let newLinkText = document.createTextNode(texte)
-  document.getElementById('result').appendChild(newLinkText)
-}
-
-function myCos(value){
-  let myTerm1 = Math.pow(Math.E, value)
-  let myTerm2 = Math.pow(Math.E, -value)
-  return (myTerm1 + myTerm2) / 2
-}
-
-function mySin(value){
-  return (Math.exp(value) - Math.exp(-value)) / 2
-}
-
-function myTan(value){
-  return (Math.exp(value) - Math.exp(-value)) / (Math.exp(value) + Math.exp(-value))
-}
-
-Array.prototype.areNumbers = function(){
-  let retour = true
-  this.forEach(function(element){
-    if(isNaN(element) || element<0 || element==""){
-      retour = false
-    }
-  })
-  return retour
-}
-
-function tchebi(){
+function tcheby(){
   let ordre = document.getElementById("ordre").value
   let attenuation = document.getElementById("attenuation").value
   let frequence = document.getElementById("frequence").value
@@ -115,16 +79,16 @@ function tchebi(){
     }
   }else{
     let message = ""
-    if(isNaN(ordre) || ordre<0 || ordre==""){
+    if(!isNumberFormated(ordre)){
       message += "\nVeuillez remplir correctement l'ordre du filtre."
     }
-    if(isNaN(attenuation) || attenuation<0 || attenuation==""){
+    if(!isNumberFormated(attenuation)){
       message += "\nVeuillez remplir correctement le taux atténuation."
     }
-    if(isNaN(frequence) || frequence<0 || frequence==""){
+    if(!isNumberFormated(frequence)){
       message += "\nVeuillez remplir correctement la fréquence de coupure."
     }
-    if(isNaN(resistance) || resistance<0 || resistance==""){
+    if(!isNumberFormated(resistance)){
       message += "\nVeuillez remplir correctement l'impédance."
     }
     window.alert(message)

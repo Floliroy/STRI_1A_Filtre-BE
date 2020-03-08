@@ -11,7 +11,6 @@ input{
     position: absolute;
     left: 46%;
     margin-top: 4px;
-    border: 2px solid rgb(154, 177, 255);
     border-radius: 3px;
 }
 
@@ -19,7 +18,7 @@ select{
     position: absolute;
     right: 54.5%;
     margin-top: 4px;
-    border: 2px solid rgb(154, 177, 255);
+    border: 2px solid rgb(168, 168, 168);
     border-radius: 3px;
 }
 
@@ -27,6 +26,18 @@ span{
     position: absolute;
     right: 54.5%;
     margin-top: 7px;
+}
+
+.unknow{
+    border: 2px solid rgb(154, 177, 255);
+}
+
+.validate{
+    border: 2px solid rgb(100, 255, 100);
+}
+
+.error{
+    border: 2px solid rgb(255, 100, 100);
 }
 
 button {
