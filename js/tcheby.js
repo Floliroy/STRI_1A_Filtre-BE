@@ -6,7 +6,7 @@ function tcheby(){
 
   const parametres = [ordre, attenuation, frequence, resistance]
 
-  if (parametres.areNumbers() && !ordre.includes(",") && !ordre.includes(".")){
+  if (parametres.areNumbers() && ordre.isNumberFormated(true)){
     const pi = Math.PI
 
     ordre = parseFloat(ordre)
