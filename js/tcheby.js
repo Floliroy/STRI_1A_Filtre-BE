@@ -5,12 +5,12 @@ function tcheby(){
   let resistance = document.getElementById("resistance").value
 
   let parametres = new Map()
-  parametres.set(ordre, {decimal: true, min: 1})
-  parametres.set(attenuation, {decimal: false, min: 0})
-  parametres.set(frequence, {decimal: false, min: 0})
-  parametres.set(resistance, {decimal: false, min: 0})
+  parametres.set("ordre", {nombre: ordre, decimal: true, min: 1})
+  parametres.set("attenuation", {nombre: ordre, decimal: false, min: 0})
+  parametres.set("frequence", {nombre: ordre, decimal: false, min: 0})
+  parametres.set("resistance", {nombre: ordre, decimal: false, min: 0})
 
-  if (parametres.areNumbers()){
+  if(parametres.areNumbers()){
     const pi = Math.PI
 
     ordre = parseFloat(ordre)
