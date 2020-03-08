@@ -12,6 +12,7 @@ input{
     left: 46%;
     margin-top: 4px;
     border-radius: 3px;
+    padding-left: 3px;
 }
 
 select{
