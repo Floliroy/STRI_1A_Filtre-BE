@@ -3,30 +3,29 @@ body {
     color: white;
     text-align: center;
     font-family: Arial,sans-serif;
-    min-width: 400px;
+    min-width: 600px;
     margin: 20px;
 }
 
 input{
-    position: absolute;
-    left: 46%;
-    margin-top: 4px;
+    width: 169px;
+    margin-top: 3px;
     border-radius: 3px;
     padding-left: 3px;
 }
 
 select{
     position: absolute;
-    right: 54.5%;
-    margin-top: 4px;
+    margin-top: 3px;
+    margin-left: 180px; /* a bit more than the size of the input */
     border: 2px solid rgb(168, 168, 168);
     border-radius: 3px;
 }
 
 span{
     position: absolute;
-    right: 54.5%;
-    margin-top: 7px;
+    margin-top: 6px;
+    margin-left: 180px; /* a bit more than the size of the input */
 }
 
 .unknow{
