@@ -24,8 +24,8 @@ function myTan(value){
     return (Math.exp(value) - Math.exp(-value)) / (Math.exp(value) + Math.exp(-value))
 }
 
-function isNumberFormated(number){
-    if(isNaN(number) || number<0 || number==""){
+function isNumberFormated(number, decimal){
+    if(isNaN(number) || number<0 || number=="" || (decimal && (number.includes(",") || number.includes(".")))){
         return false
     }
     return true
@@ -37,9 +37,9 @@ function removeClasses(id){
     $(`#${id}`).removeClass("validate")
 }
 
-function validateNumber(id){
+function validateNumber(id, decimal){
     let element = document.getElementById(id).value
-    if(isNumberFormated(element)){
+    if(isNumberFormated(element, decimal)){
         removeClasses(id)
         $(`#${id}`).addClass("validate")
     }else{
@@ -51,7 +51,7 @@ function validateNumber(id){
 Array.prototype.areNumbers = function(){
     let retour = true
     this.forEach(function(element){
-        if(!isNumberFormated(element)){
+        if(!isNumberFormated(element, false)){
             retour = false
         }
     })

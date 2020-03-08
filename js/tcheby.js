@@ -6,7 +6,7 @@ function tcheby(){
 
   const parametres = [ordre, attenuation, frequence, resistance]
 
-  if (parametres.areNumbers()){
+  if (parametres.areNumbers() && !ordre.includes(",") && !ordre.includes(".")){
     const pi = Math.PI
 
     ordre = parseFloat(ordre)
@@ -79,7 +79,7 @@ function tcheby(){
     }
   }else{
     let message = ""
-    if(!isNumberFormated(ordre)){
+    if(!isNumberFormated(ordre) || ordre.includes(",") || ordre.includes(".")){
       message += "\nVeuillez remplir correctement l'ordre du filtre."
     }
     if(!isNumberFormated(attenuation)){
