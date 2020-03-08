@@ -1,4 +1,4 @@
-body {
+body{
     background-color: #4e4e50;
     color: white;
     text-align: center;
@@ -40,7 +40,7 @@ span{
     border: 2px solid rgb(255, 100, 100);
 }
 
-button {
+button{
     background-color: rgb(73, 85, 248);
     border: none;
     border-radius: 5px;
@@ -57,7 +57,16 @@ button {
     border-radius: 5px;
 }
 
-footer {
+table{
+    width: 100%;
+}
+td{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 50%;
+}
+
+footer{
     position: fixed;
     left: 0;
     bottom: 0;

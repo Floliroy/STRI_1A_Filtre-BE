@@ -11,7 +11,6 @@ function createHeader(tr, titre, colspan){
 function createTable(resistance, capacite, bobine){
     let table = document.createElement("table")
 
-    table.style.width = "100%"
     table.setAttribute("border", "1")
     let tbody = document.createElement("tbody");
 
