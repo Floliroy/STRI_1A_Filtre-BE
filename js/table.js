@@ -25,23 +25,27 @@ function createTable(resistance, capacite, bobine){
     createHeader(tr, "Bobine(s)", 1)
     tbody.appendChild(tr)
 
+    let nbtour = capacite.length
+    if (nbtour % 2 == 0) {
+        nbtour++
+    }
     //Toutes les valeurs a remplir
-    for(let i=1; i<=Math.ceil(capacite.length/2) ; i++){
-        tr = document.createElement("tr")
-
+    for(let i=1; i<nbtour ; i++){
         let td = document.createElement("td")
-        td.appendChild(document.createTextNode(`${capacite[i].toExponential(2)} F`))
-        tr.appendChild(td)
 
-        td = document.createElement("td")
-        if((i) != Math.ceil(capacite.length/2)){
-            td.appendChild(document.createTextNode(`${bobine[i].toExponential(2)} H`))
+        if(i % 2 == 1){
+            tr = document.createElement("tr")
+            td.appendChild(document.createTextNode(`${capacite[i].toExponential(3).toString().replace("e", " e")} F`))
+            tr.appendChild(td)
+            tbody.appendChild(tr)
         }else{
-            td.appendChild(document.createTextNode("/"))
+            if(bobine[i]){
+                td.appendChild(document.createTextNode(`${bobine[i].toExponential(3).toString().replace("e", " e")} H`))
+            }else{
+                td.appendChild(document.createTextNode("/"))
+            }
+            tr.appendChild(td)
         }
-        
-        tr.appendChild(td)
-        tbody.appendChild(tr)
     }
 
     table.appendChild(tbody)
