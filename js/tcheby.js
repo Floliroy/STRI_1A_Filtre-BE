@@ -34,12 +34,9 @@ function tcheby(){
         let rn = r * resistance
 
         let ak = []
-        for(let i=1 ; i<=ordre ; i++){
-            ak[i] = Math.sin((2 * i - 1) * pi / (2 * ordre))
-        }
-
         let bk = []
         for(let i=1 ; i<=ordre ; i++){
+            ak[i] = Math.sin((2 * i - 1) * pi / (2 * ordre))
             bk[i] = Math.pow(gamma, 2) + Math.pow(Math.sin(i * pi / ordre), 2)
         }
 
@@ -50,12 +47,9 @@ function tcheby(){
         }
 
         let l = []
-        for(let i=1 ; i<=ordre ; i++){
-            l[i] = resistance * gk[i] / pulsation
-        }
-
         let c = []
         for(let i=1 ; i<=ordre ; i++){
+            l[i] = resistance * gk[i] / pulsation
             c[i] = gk[i] / (resistance * pulsation)
         }
 
