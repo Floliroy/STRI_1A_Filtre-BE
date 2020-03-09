@@ -78,7 +78,7 @@ function tcheby(){
             message += "<br/>Veuillez remplir correctement la fréquence de coupure."
         }
         if(!resistance.isNumberFormated(false, 0)){
-            message += "<br/>Veuillez remplir correctement l'impédance."
+            message += "<br/>Veuillez remplir correctement l'impédance d'entrée."
         }
         document.getElementById("dialog").innerHTML = message
         $("#dialog").dialog("open")
