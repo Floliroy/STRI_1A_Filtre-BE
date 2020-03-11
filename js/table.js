@@ -35,12 +35,12 @@ function createTable(resistance, capacite, bobine){
 
         if(i % 2 == 1){
             tr = document.createElement("tr")
-            td.appendChild(document.createTextNode(`${capacite[i].toExponential(3).toString().replace("e", " e")} F`))
+            td.appendChild(document.createTextNode(`C${i} = ${capacite[i].toExponential(3).toString().replace("e", " e")} F`))
             tr.appendChild(td)
             tbody.appendChild(tr)
         }else{
             if(bobine[i]){
-                td.appendChild(document.createTextNode(`${bobine[i].toExponential(3).toString().replace("e", " e")} H`))
+                td.appendChild(document.createTextNode(`L${i} = ${bobine[i].toExponential(3).toString().replace("e", " e")} H`))
             }else{
                 td.appendChild(document.createTextNode("/"))
             }
